@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mobile Browser Detect</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <script type="text/javascript" src="js/mdetect.js"></script>
+
+    <script type="text/javascript" language="JavaScript">
+      var checkMobile = true;
+      if(location.search != '' && location.search.indexOf('nomobilecheck')) {
+        checkMobile = false;
+      }
+
+      if (checkMobile && (isTierIphone || DetectMobileQuick())) {
+        window.location = 'http://mramobile.richmondday.com';
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="#">Mobile Browser Detect</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="hero-unit">
+        <h1>Hello there!</h1>
+        <p>I'm going to detect whether you are using a mobile browser or not</p>
+        <ul>
+          <li>If you are, i'm going to redirect you to a mobile version of the site</li>
+          <li>If you aren't using a mobile browser (or if ?nomobilecheck is in the querystring) then nothing will happen</li>
+        </ul>
+      </div>
+
+      <footer>
+        <p>&copy; Richmond Day</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
